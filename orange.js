@@ -18,12 +18,5 @@ class Orange {
   }
 }
 
-module.exports = Orange;
+// module.exports = Orange;
 
-
-function sayHi(name) {
-
-  console.log(name);
-}
-
-sayHi('Fn')

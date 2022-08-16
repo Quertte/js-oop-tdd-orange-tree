@@ -1,8 +1,8 @@
-const Orange = require('./orange');
+// const Orange = require('./orange');
 
 class OrangeTree {
 
-  constructor(age, height, oranges = []) {
+  constructor(age = 1, height = 5, oranges = []) {
     this.age = age;
     this.height = height;
     this.oranges = oranges;
@@ -14,7 +14,7 @@ class OrangeTree {
     if (this.maxHeight - this.height >= 2.5) {
       this.height += 2.5;
     }
-    if (this.isMature()) {
+    if (this.isMature() && this.age < 100) {
       let arr = Orange.generateOrange(Math.floor(Math.random() * (300 - 100) + 100));
       arr.forEach(el => this.oranges.push(el));
     }
@@ -45,4 +45,4 @@ class OrangeTree {
 }
 
 
-module.exports = OrangeTree;
+// module.exports = OrangeTree;
